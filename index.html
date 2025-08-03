@@ -1,51 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>User Info Page</title> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn how to build accessible and SEO-friendly web pages using HTML5 semantic elements." />
+  <meta name="keywords" content="HTML5, semantic HTML, accessibility, SEO, web development" />
+  <meta name="author" content="Brian Ouma" />
+  <title>HTML5 Semantic Web Page with Accessibility & SEO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header, nav, main, aside, footer {
+      padding: 1em;
+    }
+    header, footer {
+      background-color: #333;
+      color: #fff;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1em;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    article {
+      flex: 3;
+      padding-right: 1em;
+    }
+    aside {
+      flex: 1;
+      background-color: #efefef;
+      padding: 1em;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our User Info Page</h1> 
-    </header>
-    <p>This page contains basic user information, a registration form, and some useful links and media.</p>
-    <h2>Registration Form</h2>
-    <form>
-        <label for="fullname">Full Name:</label><br>
-        <input type="text" id="fullname" name="fullname"><br><br>
+  <header role="banner">
+    <h1>Accessible & SEO-Friendly Web Page</h1>
+    <p>Your guide to semantic HTML, accessibility, and search optimization</p>
+  </header>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+  <nav role="navigation" aria-label="Main Navigation">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone"><br><br>
+  <main role="main">
+    <article id="articles">
+      <h2>Why Use Semantic HTML?</h2>
+      <p>Semantic elements clearly describe their meaning to both the browser and the developer. They improve accessibility by helping screen readers and assistive technologies interpret the content better.</p>
 
-        <input type="submit" value="Register">
-    </form>
-    <h2>User Information</h2>
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-        </tr>
-        <tr>
-            <td>Brian</td>
-            <td>brian@example.com</td>
-            <td>0700123456</td>
-        </tr>
-        <tr>
-            <td>John</td>
-            <td>john@example.com</td>
-            <td>0712345678</td>
-        </tr>
-    </table>
-    <h2>Our Logo</h2>
-    <img src="https://via.placeholder.com/150" alt="Placeholder Logo">
-    <p>
-        <a href="https://google.com" target="_blank">Visit Google</a>
-    </p>
+      <h3>Key Elements</h3>
+      <ul>
+        <li><strong>&lt;header&gt;</strong> – For page headers</li>
+        <li><strong>&lt;nav&gt;</strong> – For navigation menus</li>
+        <li><strong>&lt;main&gt;</strong> – Main content of the document</li>
+        <li><strong>&lt;article&gt;</strong> – Independent, self-contained content</li>
+        <li><strong>&lt;aside&gt;</strong> – Related or sidebar content</li>
+        <li><strong>&lt;footer&gt;</strong> – Footer content</li>
+      </ul>
+    </article>
 
+    <aside aria-label="Helpful Resources">
+      <h2>Related Links</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN Web Docs</a></li>
+        <li><a href="https://web.dev/learn/html/" target="_blank" rel="noopener">Google Web Fundamentals</a></li>
+        <li><a href="https://www.w3.org/WAI/" target="_blank" rel="noopener">W3C Web Accessibility Initiative</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Brian Ouma. All rights reserved.</p>
+    <p><a href="#top" style="color: #ccc;">Back to Top</a></p>
+  </footer>
 </body>
 </html>
